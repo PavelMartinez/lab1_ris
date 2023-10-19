@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Выбор запроса</title>
+    </head>
+
+    <body>
+    <h2 align="center" style="margin-bottom: 5px;"> Выберите запрос</h2>
+    <h4 align="center" style="margin-bottom: 15px;"> Запрос 1</h4>
+    <p align="center">Вывести все продукты, стоимость которого менее заданного значения.</p>
+    <div align="center">
+        <a href ={{url_for('bp_query.query_1')}}>Запрос 1</a>
+    </div>
+    <br>
+    <h4 align="center" style="margin-bottom: 15px;"> Запрос 2</h4>
+    <p align="center">Вывести все продукты, которые измеряются в заданной величине.</p>
+    <div align="center">
+        <a href ={{url_for('bp_query.query_2')}}>Запрос 2</a>
+    </div>
+    <div align="center" style="margin-top: 25px;">
+        <a href="{{ url_for('start') }}">Назад</a>
+    </div>
+</body>
+</html>

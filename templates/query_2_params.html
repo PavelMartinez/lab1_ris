@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Параметры запроса 2</title>
+    <style type="text/css">
+      h2 { font-size  : 14pt;
+           color      : black
+      }
+      label { font-size  : 14pt;
+              color      : green
+      }
+    </style>
+</head>
+<body>
+  <h2 align="center">Введите название единицы измерения (шт, гр, кг). Будут выведены записи с указанной Вами единицей измерения</h2>
+    <div align="center">
+        <form action="" method="POST">
+            <label for="prod_measure">Единица измерения (шт, гр, кг) </label>
+            <input name="prod_measure" id="prod_measure" type="text" placeholder="prod_measure">
+            <br><br>
+            <input type="submit" value="Выполнить запрос 2">
+        </form>
+    </div>
+    <br>
+    <div align="center" style="margin-top: 25px;">
+        <a href="{{ url_for('bp_query.queries_list') }}">Назад</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Параметры запроса 1</title>
+    <style type="text/css">
+      h2 { font-size  : 14pt;
+           color      : black
+      }
+      label { font-size  : 14pt;
+              color      : green
+      }
+    </style>
+</head>
+<body>
+  <h2 align="center">Введите значение цены. Будут выведены записи с ценой, ниже указанной Вами.</h2>
+    <div align="center">
+        <form action="" method="POST">
+            <label for="prod_price">Значение цены</label>
+            <input name="prod_price" id="prod_price" type="text" placeholder="min_prod_price">
+            <br><br>
+            <input type="submit" value="Выполнить запрос 1">
+        </form>
+    </div>
+    <br>
+    <div align="center" style="margin-top: 25px;">
+        <a href="{{ url_for('bp_query.queries_list') }}">Назад</a>
+    </div>
+</body>
+</html>
