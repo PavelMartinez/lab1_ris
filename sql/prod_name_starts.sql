@@ -1,0 +1,1 @@
+select prod_id, prod_name, prod_measure, prod_price from products where prod_name LIKE '$prod_name_starts%'

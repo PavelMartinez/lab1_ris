@@ -1,8 +1,24 @@
+html {
+    margin: 0;
+    padding: 0;
+    color: black;
+}
+
 body {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    background-color: #d0b5f7;
+    font-size: 20px;
+}
+
+.linkWrapper {
+    margin: 20px 0px;
+}
+
+a, input {
+    padding: 5px 10px;
+    border: 2px solid black;
+    text-decoration: none;
+    background-color: #d0b5f7;
+    color: black;
 }
 
 h1 {
@@ -13,7 +29,6 @@ h1 {
 
 label {
     font-size: 14pt;
-    color: blue;
 }
 
 input {
@@ -21,22 +36,22 @@ input {
 }
 
 table {
-    border: 1px solid;
+    border: 1px solid pink;
     width: 60%;
     min-height: 100%;
 }
 
 td {
-    font-family: 'Verdana';
+    font-family: 'Arial, sens-serif';
     font-size: 10pt;
-    color: blue;
+    color: white;
     text-align: center;
     border: 1pt solid;
     border-color: black;
 }
 
 .table-title {
-    font-family: 'Verdana';
+    font-family: 'Arial, sens-serif';
     font-weight: bold;
     font-size: 12pt;
     color: black;

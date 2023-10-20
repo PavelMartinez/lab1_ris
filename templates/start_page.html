@@ -3,13 +3,13 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title>Работа с запросами</title>
+        <title>Запросы</title>
+        <link type="text/css" rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
     </head>
 
     <body>
-    <h4 align=center style="margin-bottom: 15px;"> Выберите действие</h4>
-    <div align=center>
-        <a href ={{url_for('bp_query.queries_list')}}> Начать запросы</a>
+    <div align=center class="linkWrapper">
+        <a href ={{url_for('bp_query.queries_list')}}>Меню работы с запросами</a>
     </div>
 </body>
 </html>

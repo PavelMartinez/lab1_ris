@@ -4,22 +4,22 @@
     <head>
         <meta charset="UTF-8">
         <title>Выбор запроса</title>
+        <link type="text/css" rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
     </head>
 
     <body>
-    <h2 align="center" style="margin-bottom: 5px;"> Выберите запрос</h2>
     <h4 align="center" style="margin-bottom: 15px;"> Запрос 1</h4>
-    <p align="center">Вывести все продукты, стоимость которого менее заданного значения.</p>
-    <div align="center">
+    <p align="center">Вывести все продукты, названия которых начинаются на заданную букву.</p>
+    <div align="center" class="linkWrapper">
         <a href ={{url_for('bp_query.query_1')}}>Запрос 1</a>
     </div>
-    <br>
-    <h4 align="center" style="margin-bottom: 15px;"> Запрос 2</h4>
-    <p align="center">Вывести все продукты, которые измеряются в заданной величине.</p>
-    <div align="center">
+    <br><br>
+    <h4 align="center" class="linkWrapper"> Запрос 2</h4>
+    <p align="center">Вывести все продукты, которые имеют одну из двух единиц измерения</p>
+    <div align="center" class="linkWrapper">
         <a href ={{url_for('bp_query.query_2')}}>Запрос 2</a>
     </div>
-    <div align="center" style="margin-top: 25px;">
+    <div align="center" style="margin-top: 25px;" class="linkWrapper">
         <a href="{{ url_for('start') }}">Назад</a>
     </div>
 </body>

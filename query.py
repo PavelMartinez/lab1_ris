@@ -19,9 +19,9 @@ def query_1():
     if request.method == 'GET':
         return render_template('query_1_params.html')
     else:
-        prod_price = request.form.get('prod_price')
-        if prod_price:
-            sql = provider.get('prod_price.sql', prod_price=prod_price)
+        prod_name_starts = request.form.get('prod_name_starts')
+        if prod_name_starts:
+            sql = provider.get('prod_name_starts.sql', prod_name_starts=prod_name_starts)
             print(sql)
             product_result, schema = select(current_app.config['dbconfig'], sql)
             return render_template('query_1_result.html', schema=schema, result=product_result)
@@ -34,9 +34,10 @@ def query_2():
     if request.method == 'GET':
         return render_template('query_2_params.html')
     else:
-        prod_measure = request.form.get('prod_measure')
-        if prod_measure:
-            sql = provider.get('prod_measure.sql', prod_measure=prod_measure)
+        prod_measure1 = request.form.get('prod_measure1')
+        prod_measure2 = request.form.get('prod_measure2')
+        if prod_measure1 or prod_measure2:
+            sql = provider.get('prod_measure_or.sql', prod_measure1=prod_measure1, prod_measure2=prod_measure2)
             product_result, schema = select(current_app.config['dbconfig'], sql)
             return render_template('query_2_result.html', schema=schema, result=product_result)
         else:

@@ -4,27 +4,24 @@
 <head>
     <meta charset="UTF-8">
     <title>Параметры запроса 2</title>
-    <style type="text/css">
-      h2 { font-size  : 14pt;
-           color      : black
-      }
-      label { font-size  : 14pt;
-              color      : green
-      }
-    </style>
+    <link type="text/css" rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
 </head>
 <body>
-  <h2 align="center">Введите название единицы измерения (шт, гр, кг). Будут выведены записи с указанной Вами единицей измерения</h2>
+  <h2 align="center">Введите единицы измерения (шт, гр, кг). Будут выведены записи с указанными Вами единицами измерения</h2>
     <div align="center">
         <form action="" method="POST">
-            <label for="prod_measure">Единица измерения (шт, гр, кг) </label>
-            <input name="prod_measure" id="prod_measure" type="text" placeholder="prod_measure">
+            <label for="prod_measure1">Единица измерения 1 </label>
+            <input name="prod_measure1" id="prod_measure1" type="text" placeholder="prod_measure1">
+            <br><br>
+
+            <label for="prod_measure2">Единица измерения 2 </label>
+            <input name="prod_measure2" id="prod_measure2" type="text" placeholder="prod_measure2">
             <br><br>
             <input type="submit" value="Выполнить запрос 2">
         </form>
     </div>
     <br>
-    <div align="center" style="margin-top: 25px;">
+    <div align="center" class="linkWrapper">
         <a href="{{ url_for('bp_query.queries_list') }}">Назад</a>
     </div>
 </body>

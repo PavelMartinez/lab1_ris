@@ -4,21 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <title>Параметры запроса 1</title>
-    <style type="text/css">
-      h2 { font-size  : 14pt;
-           color      : black
-      }
-      label { font-size  : 14pt;
-              color      : green
-      }
-    </style>
+    <link type="text/css" rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
 </head>
 <body>
-  <h2 align="center">Введите значение цены. Будут выведены записи с ценой, ниже указанной Вами.</h2>
+  <h2 align="center">Введите букву. Будут выведены записи с названием, начинающимся с указанной Вами буквы.</h2>
     <div align="center">
         <form action="" method="POST">
-            <label for="prod_price">Значение цены</label>
-            <input name="prod_price" id="prod_price" type="text" placeholder="min_prod_price">
+            <label for="prod_name_starts">Буква</label>
+            <input name="prod_name_starts" id="prod_name_starts" type="text" placeholder="prod_name_starts">
             <br><br>
             <input type="submit" value="Выполнить запрос 1">
         </form>
