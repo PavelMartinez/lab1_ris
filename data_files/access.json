@@ -1,0 +1,9 @@
+{
+  "admin": [
+    "query_1",
+    "query_2"
+  ],
+  "user": [
+    "query_1"
+  ]
+}

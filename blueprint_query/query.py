@@ -2,6 +2,7 @@ import os
 from flask import Blueprint, request, render_template, current_app
 from db_work import select
 from sql_provider import SQLProvider
+from access import group_required
 
 blueprint_query = Blueprint('bp_query', __name__, template_folder='templates')
 
@@ -15,6 +16,7 @@ def queries_list():
 
 
 @blueprint_query.route('/query/1', methods=['GET', 'POST'])
+@group_required
 def query_1():
     if request.method == 'GET':
         return render_template('query_1_params.html')
@@ -22,7 +24,6 @@ def query_1():
         prod_price = request.form.get('prod_price')
         if prod_price:
             sql = provider.get('prod_price.sql', prod_price=prod_price)
-            print(sql)
             product_result, schema = select(current_app.config['dbconfig'], sql)
             return render_template('query_1_result.html', schema=schema, result=product_result)
         else:
@@ -30,6 +31,7 @@ def query_1():
 
 
 @blueprint_query.route('/query/2', methods=['GET', 'POST'])
+@group_required
 def query_2():
     if request.method == 'GET':
         return render_template('query_2_params.html')

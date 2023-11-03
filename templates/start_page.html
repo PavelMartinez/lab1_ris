@@ -9,7 +9,13 @@
     <body>
     <h4 align=center style="margin-bottom: 15px;"> Выберите действие</h4>
     <div align=center>
-        <a href ={{url_for('bp_query.queries_list')}}> Начать запросы</a>
+        <a href ={{url_for('bp_query.queries_list')}}>Работа с запросами</a>
+        <br>
+        <a href ={{url_for('bp_auth.start_auth')}}>Авторизация</a>
+        {% if 'user_id' in session: %}
+            <a href ={{url_for('exit_func')}}>(Выход)</a>
+        {% endif %}
+
     </div>
 </body>
 </html>
