@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>{{ title }}</title>
+    </head>
+
+    <body>
+    <h4 align=center style="margin-bottom: 15px;"> {{ title }}</h4>
+    <div align=center>
+        <a href ={{url_for('bp_report.createReport')}}>Создать отчёт</a>
+        <br>
+        <a href ={{url_for('bp_report.getReport')}}>Готовые отчёты</a>
+    </div>
+    <div align="center" style="margin-top: 25px;">
+        <a href="{{ url_for('start') }}">Назад</a>
+    </div>
+</body>
+</html>

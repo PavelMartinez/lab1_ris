@@ -1,0 +1,12 @@
+{
+  "admin": [
+    "query_1",
+    "query_2",
+    "getReport",
+    "createReport"
+  ],
+  "user": [
+    "query_1",
+    "getReport"
+  ]
+}

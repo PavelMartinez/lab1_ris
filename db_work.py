@@ -25,7 +25,7 @@ def select_dict(dbconfig: dict, _sql:str):
             result.append(dict(zip(schema, row)))
 
         print('result_dict=', result)
-    return result
+        return result
 
 
 def call_proc(dbconfig: dict, proc_name: str, *args):
