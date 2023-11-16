@@ -13,9 +13,11 @@
         <br>
         <a href ={{url_for('bp_auth.start_auth')}}>Авторизация</a>
         {% if 'user_id' in session: %}
-            <a href ={{url_for('exit_func')}}>(Выход)</a>
+            <span>({{ session['user_group'] }}</span>
+            <a href ={{url_for('exit_func')}}>Выход)</a>
         {% endif %}
-
+        <br>
+        <a href ={{url_for('bp_report.reports')}}>Работа с отчётами</a>
     </div>
 </body>
 </html>

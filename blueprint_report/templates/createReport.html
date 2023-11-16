@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+    <style type="text/css">
+      h2 { font-size  : 14pt;
+           color      : black
+      }
+      label { font-size  : 14pt;
+              color      : green
+      }
+    </style>
+    <link type="text/css" rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+</head>
+<body>
+  <h2 align="center">{{ title }}</h2>
+    <div align="center">
+        <form action="" method="POST">
+            <label for="inputYear">Год</label>
+            <input name="inputYear" id="inputYear" type="text" placeholder="2023">
+            <br>
+            <label for="inputMonth">Месяц</label>
+            <input name="inputMonth" id="inputMonth" type="text" placeholder="09">
+            <br>
+            <input type="submit" value="Создать отчёт">
+        </form>
+    </div>
+    <br>
+    {% if result %}
+    <table border = 1 width = 80%>
+        <tr>
+            {% for column in schema %}
+                <td class="border" align="center">{{column}}</td>
+            {% endfor %}
+        </tr>
+        {% for line in result %}
+            <tr>
+                {% for column in line %}
+                    <td align="center"> {{column}} </td>
+                {% endfor %}
+            </tr>
+        {% endfor %}
+    </table>
+    {% endif %}
+    <div align="center" style="margin-top: 25px;">
+        <a href="{{ url_for('bp_report.reports') }}">Назад</a>
+    </div>
+</body>
+</html>

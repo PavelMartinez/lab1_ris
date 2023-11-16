@@ -29,7 +29,7 @@ def start_auth():
                 session['user_id'] = user_dict['user_id']
                 session['user_group'] = user_dict['user_group']
                 session.permanent = True
-                return redirect(url_for('bp_query.queries_list'))
+                return redirect(url_for('start'))
             else:
                 return render_template('input_login.html', message='Пользователь не найден')
         return render_template('input_login.html', message='Повторите ввод')
