@@ -10,3 +10,6 @@ class SQLProvider:
 
     def get(self, name, **kwargs) -> str:
         return self._scripts.get(name, '').substitute(**kwargs)
+
+    def insert(self, name, **kwargs) -> str:
+        return self._scripts.get(name, '').substitute(**kwargs)

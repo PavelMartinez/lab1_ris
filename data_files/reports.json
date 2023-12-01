@@ -1,0 +1,12 @@
+[
+  {
+    "title": "report 1",
+    "sql": "report.sql",
+    "key": "report_1"
+  },
+  {
+    "title": "report 2",
+    "sql": "report2.sql",
+    "key": "report_2"
+  }
+]

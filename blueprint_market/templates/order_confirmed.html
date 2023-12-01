@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Заказ подтвержден</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+        }
+        ul {
+            list-style-type: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Ваш заказ успешно оформлен!</h1>
+    <p>Спасибо за покупку. Ваш заказ был успешно обработан и скоро будет отправлен.</p>
+
+    <h2>Детали заказа:</h2>
+    <ul>
+        <!-- Вставка деталей заказа из сессии или контекста, переданного в шаблон -->
+        {% if order_details %}
+            {% for item in order_details %}
+                <li>{{ item.product_name }} - Количество: {{ item.quantity }}, Цена: {{ item.price }} руб.</li>
+            {% endfor %}
+        {% else %}
+            <li>Информация о заказе недоступна.</li>
+        {% endif %}
+    </ul>
+
+    <a href="{{ url_for('bp_market.market_index') }}">Вернуться назад</a>
+</body>
+</html>

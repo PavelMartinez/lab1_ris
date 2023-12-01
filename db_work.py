@@ -12,6 +12,15 @@ def select(dbconfig: dict, _sql: str):
     return result, schema
 
 
+def insert(dbconfig: dict, _sql: str):
+    with DBContextManager(dbconfig) as cursor:
+        if cursor is None:
+            raise ValueError('Курсор не создан')
+
+        cursor.execute(_sql)
+    return 1
+
+
 def select_dict(dbconfig: dict, _sql:str):
     with DBContextManager(dbconfig) as cursor:
 
