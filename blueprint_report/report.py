@@ -11,7 +11,7 @@ provider = SQLProvider(os.path.join(os.path.dirname(__file__), 'sql'))
 
 @blueprint_report.route('/')
 def reports():
-    return render_template('report.html', title='Страница работы с отчётами')
+    return render_template('report.html', title='Страница работы с отчётами', reports=current_app.config['reports_config'])
 
 
 @blueprint_report.route('/get', methods=['GET', 'POST'])
@@ -19,8 +19,7 @@ def reports():
 @group_required
 def getReport():
     if request.method == 'GET':
-        getResult, getSchema = select(current_app.config['dbconfig'], "select * from report")
-        return render_template('getReport.html', title='Страница поиска отчётов', schema=getSchema, result=getResult)
+        return render_template('getReport.html', title='Страница поиска отчётов')
     else:
         year = request.form.get('inputYear')
         month = request.form.get('inputMonth')
